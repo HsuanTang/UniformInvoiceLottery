@@ -13,7 +13,11 @@ const snapshotZone = document.getElementById('snapshot')
 const captureButton = document.getElementById('capture')
 const result = document.getElementById('result')
 
-navigator.mediaDevices.getUserMedia({ video: true }).then(stream => {
+navigator.mediaDevices.getUserMedia({
+    video: {
+        facingMode: 'environment'
+    }
+}).then(stream => {
     player.srcObject = stream
 })
 
