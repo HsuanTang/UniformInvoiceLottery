@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>統一發票兌獎</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
+    <link rel="stylesheet" href="./style.css?20210216">
+</head>
+
+<body>
+    <div id="app">
+        <video id="player" controls></video>
+        <button id="capture">Capture</button>
+        <canvas id="snapshot" width="320" height="240"></canvas>
+        <textarea id="result" style="width:640px; height:240px;"></textarea>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src='https://unpkg.com/tesseract.js@v2.1.0/dist/tesseract.min.js'></script>
+    <script src="./main.js?20210216"></script>
+</body>
+
+</html>
