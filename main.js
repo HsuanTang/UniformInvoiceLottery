@@ -10,7 +10,9 @@ const carApp = {
     methods: {
         check() {
             this.isCkecking = true;
-            const context = snapshot.getContext('2d')
+            const context = snapshot.getContext('2d');
+            snapshotZone.width = player.videoWidth;
+            snapshotZone.height = player.videoHeight;
             context.drawImage(player, 0, 0, snapshotZone.width, snapshotZone.height)
             Tesseract
                 .recognize(snapshotZone, 'eng')
@@ -33,7 +35,9 @@ const carApp = {
         }
     },
     mounted() {
-        snapshot.style.display = "none";
+        // snapshot.style.display = "none";
+        // snapshotZone.width = 1078;
+        // snapshotZone.height = 1508;
     },
 };
 

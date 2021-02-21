@@ -10,9 +10,15 @@
 
 <body>
     <div id="app">
-        <video autoplay id="player"></video>
+        <div class="columns">
+            <div class="column">
+                <video autoplay id="player"></video>
+            </div>
+            <div class="column">
+                <canvas id="snapshot"></canvas>
+            </div>
+        </div>
         <button class="button is-primary is-large is-fullwidth" :class="{ 'is-loading': isCkecking == true }" @click="check()">辨識發票號碼</button>
-        <canvas id="snapshot"></canvas>
         <div class="modal" :class="{ 'is-active': isModalActive == true }">
             <div class="modal-background" @click="closeModal()"></div>
             <div class="modal-card">
